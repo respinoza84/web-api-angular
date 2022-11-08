@@ -1,0 +1,22 @@
+<p class="underline-offset-[3px]">Total of Items {{ count }}</p>
+<p class="underline-offset-[3px]">
+  <!--todo read the slice and displayed-->
+  Total of Items displayed:
+</p>
+
+<div
+  id="country"
+  class="ml-2 bg-slate-400 text-metal"
+  *ngFor="
+    let country of countryList ? countryList.slice(0, 15) : [];
+    let l = count
+  "
+>
+  <div class="count">{{ l }}</div>
+  <h3 id="CountryName" class="mt-6 text-3xl font-bold underline">
+    Country Name
+  </h3>
+  <span>{{ country.name.official }}</span>
+  <h3>Capital</h3>
+  <span>{{ country.capital }}</span>
+</div>

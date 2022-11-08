@@ -1,0 +1,29 @@
+.count{color:red}
+
+div.count:not(:first-child) {
+    display: none;
+}
+.count:nth-of-type(1n+4){ opacity:.3; }
+
+
+.count {
+    display:none;
+}
+
+div.count:first-child {
+    display:block !important;
+}
+
+div.count:nth-of-type(n+2) {
+    display:none !important;
+}
+
+app-country-list.count:first-of-type ~ * { display:none; }
+
+.count > *{ display: none;}
+.count > *:first-child{ display: block !important; }
+
+
+.count div:not(:first-child) {
+    display: none;
+}
